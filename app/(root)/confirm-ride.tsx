@@ -15,7 +15,7 @@ export default function ConfirmRide() {
         renderItem={({ item }) => (
           <DriverCard
             selected={selectedDriver!}
-            setSelected={() => setSelectedDriver(item.id)}
+            setSelected={() => setSelectedDriver(Number(item.id)!)}
             item={item}
           />
         )}
