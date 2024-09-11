@@ -1,4 +1,4 @@
-# Welcome to Replicar 👋
+# Welcome to Replicar 🚙
 Replicar is a simplified ride-hailing app built with React Native, inspired by Uber's core functionalities. The app connects passengers with drivers, allowing users to book a ride, track their location, and get to their destination efficiently.
 
 ## ⚙️ Tech Stack
