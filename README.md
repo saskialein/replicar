@@ -5,10 +5,10 @@ Replicar is a simplified ride-hailing app built with React Native, inspired by U
 - React Native
 - Expo
 - Stripe
-- PostgreSQL
+- PostgreSQL (Neon)
 - Google Maps
 - zustand
-- Clerk
+- Clerk Authentication
 - Tailwind CSS
 
 ## 🔋 Features
