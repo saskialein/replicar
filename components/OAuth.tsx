@@ -1,46 +1,46 @@
-import { Alert, Image, Linking, Text, View } from "react-native";
-import CustomButton from "./CustomButton";
-import { icons } from "@/constants";
-import { useCallback } from "react";
-import { useOAuth } from "@clerk/clerk-expo";
-import { googleOAuth } from "@/lib/auth";
-import { router } from "expo-router";
+import { Image, Text, View } from 'react-native'
+import CustomButton from './CustomButton'
+import { icons } from '@/constants'
+import { useCallback } from 'react'
+import { useOAuth } from '@clerk/clerk-expo'
+import { googleOAuth } from '@/lib/auth'
+import { router } from 'expo-router'
 
 export default function OAuth() {
-  const { startOAuthFlow } = useOAuth({ strategy: "oauth_google" });
+  const { startOAuthFlow } = useOAuth({ strategy: 'oauth_google' })
 
   const handleGoogleSignIn = useCallback(async () => {
     try {
-      const result = await googleOAuth(startOAuthFlow);
+      const result = await googleOAuth(startOAuthFlow)
 
-      if (result.code === "session_exists" || result.code === "success") {
-        router.push("/(root)/(tabs)/home");
+      if (result.code === 'session_exists' || result.code === 'success') {
+        router.push('/(root)/(tabs)/home')
       }
     } catch (err) {
-      console.error("OAuth error", err);
+      console.error('OAuth error', err)
     }
-  }, []);
+  }, [])
   return (
     <View>
-      <View className="flex flex-row justify-center items-center mt-4 gap-x-3">
-        <View className="flex-1 h-[1px] bg-general-100" />
-        <Text className="text-lg">Or</Text>
-        <View className="flex-1 h-[1px] bg-general-100" />
+      <View className='mt-4 flex flex-row items-center justify-center gap-x-3'>
+        <View className='h-[1px] flex-1 bg-general-100' />
+        <Text className='text-lg'>Or</Text>
+        <View className='h-[1px] flex-1 bg-general-100' />
       </View>
       <CustomButton
-        title="Log In with Google"
-        className="mt-5 w-full shadow-none"
+        title='Log In with Google'
+        className='mt-5 w-full shadow-none'
         IconLeft={() => (
           <Image
             source={icons.google}
-            resizeMode="contain"
-            className="w-5 h-5 mx-2"
+            resizeMode='contain'
+            className='mx-2 h-5 w-5'
           />
         )}
-        bgVariant="outline"
-        textVariant="primary"
+        bgVariant='outline'
+        textVariant='primary'
         onPress={handleGoogleSignIn}
       />
     </View>
-  );
+  )
 }
