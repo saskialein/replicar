@@ -60,6 +60,15 @@ declare interface InputFieldProps extends TextInputProps {
   iconStyle?: string;
   className?: string;
 }
+
+declare interface PaymentProps {
+  fullName: string;
+  email: string;
+  amount: string;
+  driverId: number;
+  rideTime: number;
+}
+
 declare interface LocationStore {
   userLatitude: number | null;
   userLongitude: number | null;
@@ -95,3 +104,8 @@ declare interface DriverStore {
   clearSelectedDriver: () => void;
 }
 
+declare interface DriverCardProps {
+  item: MarkerData;
+  selected: number;
+  setSelected: () => void;
+}
