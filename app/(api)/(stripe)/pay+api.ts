@@ -9,7 +9,7 @@ export async function POST(request: Request) {
 
     if (!payment_method_id || !payment_intent_id || !customer_id) {
       return new Response(
-        JSON.stringify({ error: "Missing required payment information" }),
+        JSON.stringify({ error: "Missing required fields" }),
         {
           status: 400,
         }
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     return new Response(
       JSON.stringify({
         success: true,
-        message: "Payment confirmed successfully",
+        message: "Payment successful",
         result,
       })
     );

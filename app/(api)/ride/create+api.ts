@@ -39,7 +39,7 @@ export async function POST(request: Request) {
     const sql = neon(`${process.env.DATABASE_URL}`);
 
     const response = await sql`
-        INSERT INTO rides ( 
+      INSERT INTO rides ( 
           origin_address, 
           destination_address, 
           origin_latitude, 
@@ -51,7 +51,7 @@ export async function POST(request: Request) {
           payment_status, 
           driver_id, 
           user_id
-        ) VALUES (
+      ) VALUES (
           ${origin_address},
           ${destination_address},
           ${origin_latitude},
@@ -63,9 +63,9 @@ export async function POST(request: Request) {
           ${payment_status},
           ${driver_id},
           ${user_id}
-        )
-        RETURNING *;
-        `;
+      )
+      RETURNING *;
+    `;
 
     return Response.json({ data: response[0] }, { status: 201 });
   } catch (error) {

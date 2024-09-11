@@ -7,12 +7,9 @@ export async function POST(request: Request) {
   const { name, email, amount } = body;
 
   if (!name || !email || !amount) {
-    return new Response(
-      JSON.stringify({ error: "Please enter a valid email address" }),
-      {
-        status: 400,
-      }
-    );
+    return new Response(JSON.stringify({ error: "Missing required fields" }), {
+      status: 400,
+    });
   }
 
   let customer;

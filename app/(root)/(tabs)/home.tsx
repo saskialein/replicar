@@ -97,7 +97,7 @@ export default function Page() {
           <>
             <View className="flex flex-row items-center justify-between my-5">
               <Text className="text-xl capitalize font-JakartaBold">
-                Welcome{" "}
+                Welcome,{" "}
                 {user?.firstName ||
                   user?.emailAddresses[0].emailAddress.split("@")[0]}{" "}
                 👋

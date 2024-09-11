@@ -62,6 +62,7 @@ export default function Payment({
           payment_method_id: paymentMethod.id,
           payment_intent_id: paymentIntent.id,
           customer_id: customer,
+          client_secret: paymentIntent.client_secret,
         }),
       });
       if (result.client_secret) {

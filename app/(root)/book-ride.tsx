@@ -18,7 +18,7 @@ export default function BookRide() {
   return (
     <StripeProvider
       publishableKey={process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY!}
-      merchantIdentifier="merchrant.replicar.com,"
+      merchantIdentifier="merchrant.com.replicar"
       urlScheme="myapp"
     >
       <RideLayout title="Book Ride">
@@ -91,9 +91,9 @@ export default function BookRide() {
           </View>
           <Payment
             fullName={user?.fullName!}
-            email={user?.emailAddresses[0].emailAddress}
+            email={user?.emailAddresses[0].emailAddress!}
             amount={driverDetails?.price!}
-            dtiverId={driverDetails?.id!}
+            driverId={driverDetails?.id}
             rideTime={driverDetails?.time!}
           />
         </>
