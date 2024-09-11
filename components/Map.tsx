@@ -5,7 +5,7 @@ import { MarkerData } from "@/types/type";
 import { useEffect, useState } from "react";
 import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
 
-const drivers = [
+export const drivers = [
   {
     id: "1",
     first_name: "James",
@@ -71,6 +71,7 @@ export default function Map() {
   const [markers, setMarkers] = useState<MarkerData[]>([]);
 
   useEffect(() => {
+    setDrivers(drivers);
     if (Array.isArray(drivers)) {
       if (!userLatitude || !userLongitude) return;
       const newMarkers = generateMarkersFromData({
