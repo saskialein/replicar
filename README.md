@@ -56,13 +56,13 @@ EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY=
 STRIPE_SECRET_KEY=
 ```
 
-1. Install dependencies
+**Install dependencies**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+**Start the app**
 
    ```bash
     npx expo start
