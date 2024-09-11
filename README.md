@@ -1,9 +1,60 @@
-# Welcome to your Expo app 👋
+# Welcome to Replicar 👋
+Replicar is a simplified ride-hailing app built with React Native, inspired by Uber's core functionalities. The app connects passengers with drivers, allowing users to book a ride, track their location, and get to their destination efficiently.
 
-This is an [Expo](https://expo.dev) project created with
-[`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## ⚙️ Tech Stack
+- React Native
+- Expo
+- Stripe
+- PostgreSQL
+- Google Maps
+- zustand
+- Clerk
+- Tailwind CSS
 
-## Get started
+## 🔋 Features
+- **Onboarding Flow**: User registration and setup process.
+- **Email Password Authentication with Verification**: Secure login with email verification.
+- **oAuth Using Google**: Easy login using Google credentials.
+- **Home Screen with Live Location & Google Map**: Real-time location tracking with markers on a map.
+- **Recent Rides**: View a list of recent rides.
+- **Google Places Autocomplete**: Search any place on Earth with autocomplete suggestions.
+- **Find Rides**: Search for rides by entering 'From' and 'To' locations.
+- **Select Rides from Map**: Choose available cars near your location from the map.
+- **Confirm Ride with Detailed Information**: View complete ride details, including time and fare price.
+- **Pay for Ride Using Stripe**: Make payments using multiple methods like cards and others.
+- **Create Rides After Successful Payment**: Book a ride after confirming payment.
+- **Profile**: View your account details.
+- **History**: Review all rides booked so far.
+- **Responsive on Android and iOS**: Optimized for both Android and iOS devices.
+
+## Run the app in development
+
+**Prerequisites**
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+**Set Up Environment Variables**
+
+Create a new file named `.env` in the root of your project and add the following content:
+
+```env
+EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=
+
+EXPO_PUBLIC_PLACES_API_KEY=
+EXPO_PUBLIC_DIRECTIONS_API_KEY=
+
+DATABASE_URL=
+
+EXPO_PUBLIC_SERVER_URL=https://replicar.dev/
+
+EXPO_PUBLIC_GEOAPIFY_API_KEY=
+
+EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+```
 
 1. Install dependencies
 
@@ -17,44 +68,4 @@ This is an [Expo](https://expo.dev) project created with
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app
-  development with Expo
-
-You can start developing by editing the files inside the **app** directory. This
-project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and
-create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following
-resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into
-  advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a
-  step-by-step tutorial where you'll create a project that runs on Android, iOS,
-  and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform
-  and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask
-  questions.
+Download the [Expo Go](https://expo.dev/go) app and Scan the QR code on your respective device to view the project.
