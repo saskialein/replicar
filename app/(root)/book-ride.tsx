@@ -62,7 +62,7 @@ export default function BookRide() {
             <View className='flex w-full flex-row items-center justify-between border-b border-white py-3'>
               <Text className='font-JakartaRegular text-lg'>Pickup Time</Text>
               <Text className='font-JakartaRegular text-lg'>
-                {formatTime(parseInt(`${driverDetails.time!}`))}
+                {formatTime(parseInt(`${driverDetails?.time!}`))}
               </Text>
             </View>
 
